@@ -6,7 +6,7 @@ const Conn = require('./models/conn/conn');
 
 Conn("localhost",27017,"tarefas");
 
-const port = 3000;
+const port = 3001;
 
 const tarefaRouter = require('./routers/tarefas.routes');
 app.use('/tarefa',tarefaRouter);

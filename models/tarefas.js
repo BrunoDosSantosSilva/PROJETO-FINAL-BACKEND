@@ -1,25 +1,15 @@
 const mongoose = require('mongoose');
 
 const tarefaModel = new mongoose.Schema({
-    titulo:{type: String, required: true},
-    descricao:{type: String, required: true},
-    prioridade:{type: String, required: true},
-    status:{type: String, required: true},
-    prazo:{type: String, required: true},
-    dataCriacao: { type: Date, default: Date.now}
+    titulo:{type: String},
+    descricao:{type: String},
+    prioridade:{type: Boolean},
+    statos:{type: Boolean},
+    prazo:{type: Boolean},
+    dataCriacao:{ type: Date, default: Date.now}
 })
 
 
 const Tarefa = mongoose.model("tarefa", tarefaModel);
 
 module.exports = Tarefa;
-
-// Título
-// Descrição
-
-// Prioridade (Alta, Média e Baixa) Ver como fazer para escolher
-
-// Status (Fazer, Fazendo, Feito)Ver como fazer para escolher
-
-// Prazo
-// Data de criação
